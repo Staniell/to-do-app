@@ -1,0 +1,40 @@
+.tasks-container{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items: center;
+    background-color: #F0F0F1;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.tasks-list{
+    width:90%;
+    background-color:rgb(56, 60, 67);
+    border: 3px black solid;
+    text-align: left;
+    margin: auto;
+    /* height:50px;
+    line-height: 50px; */
+    display: grid;
+    grid-template-columns: 60% 20% 20%;	
+    row-gap: 1em;
+}
+
+.not-done{
+    font-size: calc(10px + 2vmin);
+    color: white; 
+    padding:5px;
+}
+
+/* Done Button */
+
+.done{
+    background-color:greenyellow;
+    margin: auto;
+}
+
+.delete{
+    background-color:maroon;
+    margin: auto;
+}

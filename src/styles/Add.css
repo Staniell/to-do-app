@@ -1,0 +1,12 @@
+.add-task-container{
+    padding-top: 3%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    justify-content: center;
+}
+
+.input-task{
+    border-radius: 3px;
+    width: 40em;
+}
