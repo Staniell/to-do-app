@@ -2,20 +2,20 @@ import { useState } from "react";
 import '../styles/Tasks.css'
 import tick from '../images/download.png';
 
+import {useSelector} from 'react-redux';
+import {selectTodoList} from '../todoSlice';
+
 function Tasks(){
 
     const [show, setShow] = useState(false);
     const [taskID, setTaskID] = useState(-1);
-    const [tasks, setTask] = useState([{id:0, Task: "Eat", Status: 'Ongoing'},
-                                        {id:1, Task: "Sleep", Status: "Ongoing"},
-                                        {id:2, Task: "Play", Status: "Completed"}])
-
+    const tasks = useSelector(selectTodoList);
                 
     return( 
         <div className="tasks-container">
         {tasks.map((task, index) => <div className='tasks-list'>
-            {show & taskID == task.id ? <input type={"text"} className=''></input>  :<h2 className="not-done" onClick={()=>{handleTaskIndex(task.id)}}>
-                {index+1}. {task.Task}</h2>}
+            {show & taskID == task.id ? <input type={"text"}></input>  :<h2 className={task.done ? "initial-task completed" : "initial-task"} onClick={()=>{handleTaskIndex(task.id)}}>
+                {index+1}. {task.name}</h2>}
 
             {show & taskID == task.id ? 
                 <div style={{margin:"auto",padding:"5px"}}>

@@ -6,6 +6,9 @@
     width: 40%;
     margin: auto;
     border-radius: 10px;
+    max-height:450px;
+    overflow-y: auto;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
 
 .tasks-list{
@@ -21,11 +24,17 @@
     row-gap: 1em;
 }
 
-.not-done{
+.initial-task{
     font-size: calc(10px + 2vmin);
     color: white; 
     padding:5px;
     cursor: pointer;
+}
+
+.completed{
+    font-style: italic;
+    color: gray;
+    text-decoration: line-through;
 }
 
 /* Done Button */
