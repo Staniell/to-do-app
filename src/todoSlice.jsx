@@ -38,10 +38,17 @@ const todoSlice = createSlice({
               task.name = action.payload.name;
             }
           });
+    },
+    completeTodo: (state, action) => {
+        state.todoList.map((task) => {
+            if (task.id === action.payload.id) {
+              task.completed = !action.payload.completed;
+            }
+          });
     }
   }
 });
-export const { saveTodo, deleteTodo, updateTodo } = todoSlice.actions
+export const { saveTodo, deleteTodo, updateTodo, completeTodo } = todoSlice.actions
 
 export const selectTodoList = state => state.todos.todoList;
 
