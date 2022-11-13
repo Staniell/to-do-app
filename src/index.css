@@ -58,6 +58,10 @@ code {
   transform: translateY(0);
 }
 
+h1{
+  color: white;
+}
+
 input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;

@@ -6,18 +6,23 @@ const initialState = {
     todoList:    [{
         id: 1,
         name: "Click me to update",
-        completed: "false"
+        completed: false
     },
     {
         id: 2,
         name: "Click tick mark to complete/uncomplete",
-        completed: "true"
+        completed: true
     },
     {
         id: 3,
         name: "Click trash button to delete",
-        completed: "false"
-    }
+        completed: false
+    },
+    {
+        id: 4,
+        name: "Dummy Value",
+        completed: true
+    },
   ]};
 
 const todoSlice = createSlice({
