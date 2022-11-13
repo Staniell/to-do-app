@@ -14,10 +14,21 @@ function Tasks(){
     return( 
         <div className="tasks-container">
         {tasks.map((task, index) => <div className='tasks-list'>
-            {show & taskID == task.id ? <input></input> :<h2 className="not-done" onClick={()=>{handleTaskIndex(task.id)}}>
+            {show & taskID == task.id ? <input type={"text"} className=''></input>  :<h2 className="not-done" onClick={()=>{handleTaskIndex(task.id)}}>
                 {index+1}. {task.Task}</h2>}
-            <button className="button done">COMPLETE</button>
-            <button className="button delete">DELETE</button>
+
+            {show & taskID == task.id ? 
+                <div style={{margin:"auto",padding:"5px"}}>
+                    <button className="button delete" onClick={()=>{setShow(false)}}>CANCEL</button>
+                    <button className="button done">UPDATE</button>
+                </div>
+                    :
+                <div style={{margin:"auto",padding:"5px"}}>
+                    <button className="button delete">DELETE</button>
+                    <button className="button done">COMPLETE</button>
+                </div>
+            }
+
             </div>)}
         </div>
     );
@@ -30,3 +41,4 @@ function Tasks(){
 
 
 export default Tasks;
+

@@ -2,6 +2,7 @@ import { queryHelpers } from '@testing-library/react';
 import './styles/App.css';
 import Tasks from './components/tasks';
 import Add from './helpers/Add';
+import {configureStore} from 'redux';
 
 
 function App() {

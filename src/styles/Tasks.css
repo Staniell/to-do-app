@@ -17,7 +17,7 @@
     /* height:50px;
     line-height: 50px; */
     display: grid;
-    grid-template-columns: 60% 20% 20%;	
+    grid-template-columns: 55%  45%;	
     row-gap: 1em;
 }
 
@@ -25,16 +25,17 @@
     font-size: calc(10px + 2vmin);
     color: white; 
     padding:5px;
+    cursor: pointer;
 }
 
 /* Done Button */
 
 .done{
     background-color:greenyellow;
-    margin: auto;
+    margin-left: 10px;
 }
 
 .delete{
     background-color:maroon;
-    margin: auto;
+
 }
