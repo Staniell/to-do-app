@@ -8,5 +8,10 @@
 
 .input-task{
     border-radius: 3px;
-    width: 40em;
+    width: 30em;
+}
+
+.update-task{
+    border-radius: 3px;
+    width: 18em;
 }
