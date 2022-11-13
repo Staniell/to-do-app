@@ -5,8 +5,11 @@ import tick from '../images/download.png';
 import {useSelector} from 'react-redux';
 import {selectTodoList} from '../todoSlice';
 
-function Tasks(){
+import {useDispatch} from 'react-redux';
+import {deleteTodo} from '../todoSlice';
 
+function Tasks(){
+    const dispatch = useDispatch();
     const [show, setShow] = useState(false);
     const [taskID, setTaskID] = useState(-1);
     const tasks = useSelector(selectTodoList);
@@ -24,7 +27,7 @@ function Tasks(){
                 </div>
                     :
                 <div style={{margin:"auto",padding:"5px"}}>
-                    <button className="button delete">DELETE</button>
+                    <button className="button delete" onClick={()=>{deleteTask(task.id)}}>DELETE</button>
                     <button className="button done">COMPLETE</button>
                 </div>
             }
@@ -36,6 +39,13 @@ function Tasks(){
     function handleTaskIndex(index){
         setTaskID(index);
         setShow(!show);
+    }
+
+    function deleteTask(id){
+        dispatch(deleteTodo({
+            name:"fsad",
+            id: id
+        }))
     }
 }
 
