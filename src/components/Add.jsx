@@ -1,6 +1,5 @@
 import '../styles/Add.css'
 import { useState } from 'react';
-
 import {useDispatch} from 'react-redux';
 import {saveTodo} from '../todoSlice';
 

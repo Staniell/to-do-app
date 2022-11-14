@@ -1,16 +1,11 @@
 import { useState } from "react";
 import '../styles/Tasks.css'
-import tick from '../images/download.png';
-
 import {useSelector} from 'react-redux';
 import {selectTodoList} from '../todoSlice';
-
-import {useDispatch} from 'react-redux';
-import {deleteTodo, updateTodo, completeTodo} from '../todoSlice';
-
+import CompleteDeleteTask from "./CompleteDeleteTask";
+import UpdateTask from "./Update";
 
 function Tasks(){
-    const dispatch = useDispatch();
     const [show, setShow] = useState(false);
     const [newTask, setNewTask] = useState("");
     const [taskID, setTaskID] = useState(-1);
@@ -19,23 +14,18 @@ function Tasks(){
     return( 
         <div className="tasks-container">
         {tasks.map((task, index) => <div className='tasks-list'>
-            {show & taskID === task.id ?           <input className='update-task' value={newTask} 
-            onChange={(e)=>{setNewTask(e.target.value)}} type={'text'}></input>  
-            :
+            {show & taskID === task.id ?
+            <input className='update-task' value={newTask} 
+                onChange={(e)=>{setNewTask(e.target.value)}} type={'text'}></input>  
+                :
             <h2 className={task.completed ? "initial-task completed" : "initial-task"} 
-            onClick={()=>{handleTaskIndex(task.id, task.name)}}>
+                onClick={()=>{handleTaskIndex(task.id, task.name)}}>
                 {index+1}. {task.name}</h2>}
 
             {show & taskID === task.id ? 
-                <div style={{margin:"auto",padding:"5px"}}>
-                    <button className="button delete" onClick={()=>{setShow(false)}}>CANCEL</button>
-                    <button className="button done" onClick={()=>{updateTask(task.id, newTask)}}>UPDATE</button>
-                </div>
+                <UpdateTask id={task.id} name={newTask} onShow={() => setShow(!show)}/>
                     :
-                <div style={{margin:"auto",padding:"5px"}}>
-                    <button className="button delete" onClick={()=>{deleteTask(task.id)}}>DELETE</button>
-                    <button className="button done" onClick={()=>{completeTask(task.id, task.completed)}}>COMPLETE</button>
-                </div>
+                <CompleteDeleteTask id={task.id} completed={task.completed}/> 
             }
 
             </div>)}
@@ -48,27 +38,6 @@ function Tasks(){
         setNewTask(name);
     }
 
-    function completeTask(id, completed){
-        dispatch(completeTodo({
-            id:id,
-            completed:completed
-        }))
-    }
-
-    function updateTask(id,name){
-        dispatch(updateTodo({
-            id:id,
-            name:name,
-            completed:false
-        }))
-        setShow(!show);
-    }
-
-    function deleteTask(id){
-        dispatch(deleteTodo({
-            id: id
-        }))
-    }
 }
 
 

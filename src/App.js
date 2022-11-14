@@ -1,8 +1,6 @@
-import { queryHelpers } from '@testing-library/react';
 import './styles/App.css';
 import Tasks from './components/Tasks';
 import Add from './components/Add';
-import {configureStore} from 'redux';
 import store from './app/store';
 import { Provider } from 'react-redux';
 
