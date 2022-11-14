@@ -20,7 +20,12 @@ const initialState = {
     },
     {
         id: 4,
-        name: "Dummy Value",
+        name: "Modularize functions",
+        completed: true
+    },
+    {
+        id: 5,
+        name: "Mobile Compatibility",
         completed: true
     },
   ]};

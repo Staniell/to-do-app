@@ -11,9 +11,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>To Do List</h1>
-        <Provider store={store}><Tasks/></Provider>
-        
-        <Provider store={store}><Add/></Provider>
+        <Provider store={store}>
+          <Tasks/>
+          <Add/>
+        </Provider>
 
       </header>
     </div>

@@ -21,7 +21,7 @@ function Add(){
     return(
         <div className="add-task-container">
             <input className='input-task' value={taskName}
-             onChange={(e)=>{setTaskName(e.target.value)}} type={'text'}></input>
+             onChange={(e)=>{setTaskName(e.target.value)}} placeholder="Enter a task..." type={'text'}></input>
             <button onClick={()=>{addTask()}} className='button'>Add Task</button>
         </div>
     );

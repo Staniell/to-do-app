@@ -1,5 +1,5 @@
 .add-task-container{
-    padding-top: 3%;
+    padding-top: 2%;
     display: flex;
     flex-direction: row;
     column-gap: 0px;
@@ -9,9 +9,76 @@
 .input-task{
     border-radius: 3px;
     width: 30em;
+    margin-right: 5px;
 }
 
 .update-task{
     border-radius: 3px;
     width: 18em;
+}
+
+@media only screen and (max-width: 1300px){
+    .input-task{
+        border-radius: 3px;
+        width: 30em;
+        height: 40px;
+    }
+
+    .update-task{
+        border-radius: 3px;
+        width: 30em;
+    }
+
+    .add-task-container{
+        padding-top: 3%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    
+    .input-task{
+        border-radius: 3px;
+        width: 17em;
+    }
+
+    .update-task{
+        border-radius: 3px;
+        width: 16em;
+    }
+
+    .add-task-container{
+        padding-top: 4%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width:430px){
+    
+    .input-task{
+        border-radius: 3px;
+        width: 60%;
+        height: 25px;
+    }
+
+    .update-task{
+        border-radius: 3px;
+        width: 120%;
+    }
+    
+    .add-task-container{
+        padding-top: 4%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+    }
 }
