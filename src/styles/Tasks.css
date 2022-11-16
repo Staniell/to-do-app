@@ -2,8 +2,8 @@
     padding-top: 3%;
     padding-bottom: 3%;
     align-items: center;
-    background-color: #F0F0F1;
-    width: 40%;
+    background-color: #eff0ff;
+    width: 90%;
     margin: auto;
     border-radius: 10px;
     max-height:450px;
@@ -14,7 +14,7 @@
 .tasks-list{
     width:90%;
     background-color:rgb(56, 60, 67);
-    border: 3px black solid;
+    border: 3px #d72c4a solid;
     text-align: left;
     margin: auto;
     /* height:50px;
@@ -44,7 +44,15 @@
 
 .delete{
     background-color:maroon;
+}
 
+.update{
+    background-color: yellowgreen;
+    margin-left: 10px;
+}
+
+.cancel{
+    background-color: orange;
 }
 
 @media only screen and (max-width: 1300px){

@@ -8,11 +8,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>To Do List</h1>
-        <Provider store={store}>
-          <Tasks/>
-          <Add/>
-        </Provider>
+<div>
+          <h1>To Do List</h1>
+          <Provider store={store}>
+            <Tasks/>
+            <Add/>
+          </Provider>
+</div>
 
       </header>
     </div>

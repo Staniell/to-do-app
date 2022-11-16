@@ -10,8 +10,8 @@ export default function UpdateTask({id, name, onShow}) {
 
   return (
     <div style={{margin:"auto",padding:"5px"}}>
-      <button className="button delete" onClick={onShow}>CANCEL</button>
-      <button className="button done" onClick={()=>{updateTask()}}>UPDATE</button>
+      <button className="button cancel" onClick={onShow}>CANCEL</button>
+      <button className="button update" onClick={()=>{updateTask()}}>UPDATE</button>
     </div>
   )
 
