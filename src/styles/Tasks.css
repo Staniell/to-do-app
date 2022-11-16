@@ -1,6 +1,4 @@
 .tasks-container{
-    padding-top: 3%;
-    padding-bottom: 3%;
     align-items: center;
     background-color: #F0F0F1;
     width: 40%;
@@ -8,12 +6,13 @@
     border-radius: 10px;
     max-height:450px;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
 
 .tasks-list{
-    width:90%;
-    background-color:rgb(56, 60, 67);
+    width:100%;
+    background-color:#c8cbf2;
     border: 3px black solid;
     text-align: left;
     margin: auto;
@@ -26,10 +25,11 @@
 
 .initial-task{
     font-size: calc(10px + 2vmin);
-    color: white; 
+    color: black; 
     padding:5px;
     cursor: pointer;
 }
+
 
 .completed{
     font-style: italic;
@@ -43,22 +43,32 @@
 }
 
 .delete{
-    background-color:maroon;
+    background-color:#d72c4a;
 
 }
 
-@media only screen and (max-width: 1300px){
+.update{
+    background-color: white;
+}
+
+.cancel{
+    background-color:orange;
+
+}
+
+.update:hover{
+    color: rgba(35, 33, 33, 0.65);
+    transform: translateY(-1px);
+}
+
+
+@media only screen and (max-width: 1450px){
     .tasks-container{
-        padding-top: 3%;
-        padding-bottom: 3%;
         align-items: center;
-        background-color: #9494ff;
         width: 90%;
         max-height:450px;
     }
     .done{
-        background-color:greenyellow;
-
         width: 100px;
     }
     .delete{
@@ -71,15 +81,11 @@
 
 @media only screen and (max-width:600px){
     .tasks-container{
-        padding-top: 3%;
-        padding-bottom: 3%;
         align-items: center;
-        background-color: #bcbcdf;
         width: 90%;
         max-height:450px;
     }
     .done{
-        background-color:greenyellow;
         margin-left: 70px;
         width: 100px;
     }
@@ -95,7 +101,6 @@
         width: 100%;
     }
     .done{
-        background-color:greenyellow;
         margin-left: 35%;
         width: 60%;
         height: 20px;

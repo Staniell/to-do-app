@@ -13,7 +13,6 @@ function App() {
           <Tasks/>
           <Add/>
         </Provider>
-
       </header>
     </div>
   );
