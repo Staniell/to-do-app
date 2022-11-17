@@ -16,8 +16,6 @@
     border: 3px black solid;
     text-align: left;
     margin: auto;
-    /* height:50px;
-    line-height: 50px; */
     display: grid;
     grid-template-columns: 55%  45%;	
     row-gap: 1em;
