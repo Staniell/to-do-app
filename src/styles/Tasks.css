@@ -3,8 +3,8 @@
     background-color: #F0F0F1;
     width: 40%;
     margin: auto;
-    border-radius: 10px;
-    max-height:450px;
+    border-radius: 20px;
+    max-height:600px;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
@@ -126,12 +126,12 @@
 
 @media only screen and (max-height:880px){
     .tasks-container{
-        max-height: 480px;
+        max-height: 600px;
     }
 }
 
 @media only screen and (max-height:650px){
     .tasks-container{
-        max-height: 300px;
+        max-height: 400px;
     }
 }
